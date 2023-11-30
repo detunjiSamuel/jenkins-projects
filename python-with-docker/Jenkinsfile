@@ -10,10 +10,10 @@ pipeline {
 
         stage('dummy-build') {
             steps {
-                sh """
+                sh '''
                     cd python-with-docker/dummy-project
                     python3 main.py
-                """ 
+                ''' 
             }
         }
  }
