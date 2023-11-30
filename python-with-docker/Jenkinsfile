@@ -12,11 +12,25 @@ pipeline {
             }
         }
 
-        stage('dummy-build') {
+        stage('build') {
             steps {
                 sh '''
                     cd python-with-docker/dummy-project
                     python3 main.py
+                ''' 
+            }
+        }
+        stage('test') {
+            steps {
+                sh '''
+                    echo "testing....."
+                ''' 
+            }
+        }
+        stage('deploy') {
+            steps {
+                sh '''
+                    echo "deploying....."
                 ''' 
             }
         }
