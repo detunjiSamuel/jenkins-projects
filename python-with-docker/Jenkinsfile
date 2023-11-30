@@ -2,9 +2,18 @@
 pipeline {
     agent any
     stages {
-        stage('test') {
+        stage('bootup') {
             steps {
-                sh 'echo "Hello World" '
+                sh 'started pipeline......" '
+            }
+        }
+
+        stage('dummy-build') {
+            steps {
+                sh """
+                    cd python-with-docker/dummy-project
+                    python3 main.py
+                """ 
             }
         }
  }
