@@ -1,6 +1,10 @@
 
 pipeline {
-    agent any
+    agent {
+     node {
+        label 'docker-with-python'
+    }
+    }
     stages {
         stage('bootup') {
             steps {
