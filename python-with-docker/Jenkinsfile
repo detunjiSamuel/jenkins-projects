@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('bootup') {
             steps {
-                sh 'started pipeline......" '
+                sh 'echo "started pipeline....." '
             }
         }
 
